@@ -1,0 +1,19 @@
+﻿/* --------- normalize --------- */
+
+@import "_includes/_normalize";
+
+/* --------- mixins --------- */
+
+@import "_includes/_mixins";
+
+/* --------- variables --------- */
+
+@import "_includes/_variables";
+
+/* --------- fonts --------- */
+
+@import "_includes/fonts";
+
+/* --------- pages --------- */
+
+@import "pages/main-page.scss";
