@@ -1,0 +1,50 @@
+﻿extends ../layouts/layout.jade
+
+block content
+	.record__container
+		ul.breadcrumbs-list
+					each items, index in ['Главная', 'Контакты']
+						li.breadcrumbs-item
+							a(href="index.html"  target="_blank" class='breadcrumbs-link' + ((index == 2) ? ' breadcrumbs__link--active' : ''))= items
+		section.record__content
+			.record__content-left
+				p.content-left__title ИнвестСтройТрест Санкт-Петербург
+				.content-left__text
+					p.content-left__text-bold Адрес:
+					p.content-left__text-small г.Санкт-Петербург,ул.Ефимова 4А,офис 542 <br> м. "Сенная площадь" , "Садовая" , "Спасская"
+				.content-left__text
+					p.content-left__text-bold Телефоны:
+					a.content-left__text-number(href="tel:+88124261896") +7(812) 426-18-96
+					a.content-left__text-number(href="tel:+88005003325") +7(800) 500-33-25
+				.content-left__text
+					p.content-left__text-bold Электронная почта:
+					a.content-left__text-mail(href="mailto:mail@investstroytrest.ru") mail@investstroytrest.ru
+				.content-left__text
+					p.content-left__text-bold Режим работы:
+					p.content-left__text-small Понедельник - Суббота 10:00 - 19:00 <br> Воскресенье - выходной
+			.record__content-right(id="record__form")
+				p.content-right__title Запишитесь на встречу
+				form(action="").content-right__form
+							label.content-right__form-label(for='name')
+							input.content-right__form-input(id='name' type='text' placeholder='Имя')
+							label.content-right__form-label(for='phone')
+							input.content-right__form-input(id='phone' type='tel' placeholder='Телефон')
+							label.content-right__form-label(for='email')
+							input.content-right__form-input(id='email' type='email' placeholder='Электронная почта (не обязательно)')
+							label.content-right__form-label(for='message')
+							textarea.content-right__form-textarea(id='message' , rows='5' ,  placeholder='Напишите какое время вам удобно для встречи')
+							button.content-right__form-button( type='submit') Отправить
+		section.record__address
+			.record__address-left
+				p.address__text Схема проезда
+				.div(id="map")
+			.record__address-right
+				p.address__text Фотографии нашего офиса
+				.address-right__img-wrap
+					img.address-right__img(alt='office' src='../img/office1.jpg')
+				.address-right__img-wrap
+					img.address-right__img(alt='office' src='../img/office1.jpg')
+		include ../common/seotext.jade
+
+
+

@@ -15,6 +15,9 @@
   ],
   "dependencies": {
     "jquery": "1.11",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "bxslider-4": "^4.2.5",
+    "fancybox": "^2.1.5",
+    "malihu-custom-scrollbar-plugin": "^3.1.3"
   }
 }

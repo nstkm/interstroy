@@ -1,10 +1,165 @@
-﻿extends ../_layouts/main_layout
+﻿extends ../layouts/layout.jade
 
-block title
-	title Main Page
 
 block content
-	.wrapper
-		.main-content
-			.container
-				// content here
+	section.main-page__bg
+		.main-page__bg-wrap
+			.main-page__bg-form(id="main__form")
+				p.bg-form__text Заполните форму и получите бесплатную консультацию
+				form(action="")
+					div.bg-form__wrap
+						div.bg-form__name
+							label.bg-form__name-label(for='name')
+							input.bg-form__input(id='name' type='text' placeholder='Имя:')
+						div.bg-form__phone
+							label.bg-form__phone-label(for='phone')
+							input.bg-form__input(id='phone' type='tel' placeholder='Телефон:')
+						div.bg-form__button-wrap
+							button.bg-form__button(type='submit') Отправить
+				p.bg-form__text-private Все ваши данные находятся под защитой
+	section.main-page__why
+		.main-page-container
+			h2.main-page__why-title Почему более 700 семей выбрали нашу компанию?
+			.main-page__why-puzzles
+				.why-puzzles__big.why-puzzles__big-one
+					.big-one__small.big-one__small-one.flip-container(ontouchstart="this.classList.toggle('hover');")
+						.flipper
+							.front
+								.front__icon
+								p.front__text Опытные бригады
+							.back
+								.back__text
+									p.back__text-big Опытные бригады
+									p.back__text-small  Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+
+					.big-one__small.big-one__small-two.flip-container(ontouchstart="this.classList.toggle('hover');")
+						.flipper
+							.front
+								.front__icon
+								p.front__text 100% Материал класса "А"
+							.back
+								.back__text
+									p.back__text-big 100% Материал класса "А"
+									p.back__text-small  Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+				.why-puzzles__big.why-puzzles__big-two
+					.big-two__small.flip-container(ontouchstart="this.classList.toggle('hover');")
+						.flipper
+							.front
+								.front__icon
+								p.front__text Работаем <br> без предоплаты
+							.back
+								.back__text
+									p.back__text-big Работаем  без предоплаты
+									p.back__text-small  Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+				.why-puzzles__big.why-puzzles__big-three
+					.big-three__mediun-one.flip-container(ontouchstart="this.classList.toggle('hover');")
+						.flipper
+							.front
+								.front__icon
+								p.front__text Фиксированная цена договора
+							.back
+								.back__text
+									p.back__text-big Фиксированная цена договора
+									p.back__text-small  Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+
+					.big-three__medium-two
+						.medium-two__small-one.flip-container(ontouchstart="this.classList.toggle('hover');")
+							.flipper
+								.front
+									.front__icon
+									p.front__text Строительство полного цикла
+								.back
+									.back__text
+										p.back__text-big Строительство полного цикла
+										p.back__text-small  Далеко-далеко за словесными горами.
+						.medium-two__small-two.flip-container(ontouchstart="this.classList.toggle('hover');")
+							.flipper
+								.front
+									.front__icon
+									p.front__text Любим свое дело
+								.back
+									.back__text
+										p.back__text-big Любим свое дело
+										p.back__text-small Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.
+	section.main-page__houses
+		.main-page-container
+			.main-page__houses-wrap
+				.main-page__houses-big.main-page__houses-big--one
+					.houses-big__medium.houses-big__medium-one
+						.medium-one__small.medium-one__small-one
+							a( target="_blank" href="").houses__link
+								p.houses__text Строительство домов и бань
+								img.houses__photo(alt="houses" src='../img/house5.jpg')
+
+
+						.medium-one__small.medium-one__small-two
+							a( target="_blank" href="").houses__link
+								p.houses__text Инженерные коммуникации
+								img.houses__photo(alt="houses" src='../img/house6.jpg')
+					.houses-big__medium.houses-big__medium-two
+						.medium-two__small.medium-two__small-one
+							a( target="_blank" href="maps_object.html").houses__link
+								p.houses__text Карта строящихся объектов
+								img.houses__photo(alt="houses" src='../img/house7.jpg')
+						.medium-two__small.medium-two__small-two
+							a( target="_blank" href="").houses__link
+								p.houses__text Подъем дома и ремонт фундамента
+								img.houses__photo(alt="houses" src='../img/house1.jpg')
+						.medium-two__small.medium-two__small-three
+							a( target="_blank" href="").houses__link
+								p.houses__text Заборы
+								img.houses__photo(alt="houses" src='../img/house2.jpg')
+				.main-page__houses-big.main-page__houses-big--two
+					.houses-big__two-medium.houses-big__two-medium--one
+						a( target="_blank" href="").houses__link
+							p.houses__text Фундаменты
+							img.houses__photo(alt="houses" src='../img/house3.jpg')
+					.houses-big__two-medium.houses-big__two-medium--two
+						a( target="_blank" href="").houses__link
+							p.houses__text Карта земельных участков
+							img.houses__photo(alt="houses" src='../img/house4.jpg')
+					.houses-big__two-medium.houses-big__two-medium--three
+						a( target="_blank" href="").houses__link
+							p.houses__text Ландшафтный дизайн
+							img.houses__photo(alt="houses" src='../img/house8.jpg')
+	section.main-page__projects
+		.main-page-container
+			h2.projects__title Избранные проекты
+			a( href='projects.html' target='_blank').projects__link Смотреть все проекты
+			.projects__wrap
+				a( target="_blank" href='').projects__item
+					img(src='../img/house1.jpg' alt='projects').projects__item-img
+					p.projects__item-title Комфорт КА 025
+					p.projects__item-text Каркасный дом
+					p.projects__item-number 120 м<sup>2</sup> <span> (9&#215;7) </span>
+					p.projects__item-price--old 2 150 000 руб.
+					p.projects__item-price--new  1 970 000  <span> руб.</span>
+				a( target="_blank" href='').projects__item
+					img(src='../img/house2.jpg' alt='projects').projects__item-img
+					.projects__item-line
+					p.projects__item-title Ясность КА 025
+					p.projects__item-text Каркасный дом
+					p.projects__item-number 120 м<sup>2</sup> <span> (9&#215;7) </span>
+					.projects__item-line
+					p.projects__item-price--old 2 150 000 руб.
+					p.projects__item-price--new 1 970 000  <span> руб.</span>
+				a( target="_blank" href='').projects__item
+					img(src='../img/house3.jpg' alt='projects').projects__item-img
+					.projects__item-line
+					p.projects__item-title Триумф КА 025
+					p.projects__item-text Каркасный дом
+					p.projects__item-number 99 м<sup>2</sup>
+					.projects__item-line
+					p.projects__item-price--old 2 000 000 руб.
+					p.projects__item-price--new  1 970 000  <span> руб.</span>
+				a( target="_blank" href='').projects__item
+					img(src='../img/house4.jpg' alt='projects').projects__item-img
+					.projects__item-line
+					p.projects__item-title Надежда КА 025
+					p.projects__item-text Каркасный дом
+					p.projects__item-number 113 м<sup>2</sup> <span> (9&#215;8,5) </span>
+					.projects__item-line
+					p.projects__item-price--old 2 100 000 руб.
+					p.projects__item-price--new  1 970 000  <span> руб.</span>
+	include ../common/feedback.jade
+	include ../common/seotext.jade

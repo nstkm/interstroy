@@ -1,0 +1,350 @@
+﻿extends ../layouts/layout.jade
+
+block content
+	//- .projects-filter.js-project-filter(data-url-set-parameters='/ajax/get-parameters/')
+	//- 	form(name='arrFilter_form', action='index.html', method='get')
+	//- 		.filter-block
+	//- 			.block-title Категория дома
+	//- 			.checkbox-list.js-section
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_ff[SECTION_ID][]', value='12')
+	//- 					span.checkbox
+	//- 					span Популярные проекты
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_ff[SECTION_ID][]', value='161')
+	//- 					span.checkbox
+	//- 					span Уникальные проекты
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_ff[SECTION_ID][]', value='3')
+	//- 					span.checkbox
+	//- 					span Дома с участками
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_ff[SECTION_ID][]', value='292')
+	//- 					span.checkbox
+	//- 					span Проекты бань
+	//- 		.filter-block
+	//- 			.block-title Цена
+	//- 			.range-slider-widget.jsRangeSlider(data-min='0', data-max='14.12', data-mindefault='0', data-maxdefault='15', data-step='1', data-glued='15')
+	//- 				.slider-inputs
+	//- 					span.from От
+	//- 					input.min-input.jsMinInput.js-price-min(type='text', name='arrFilter_pf[PRICE][LEFT]')
+	//- 					span.to до
+	//- 					input.max-input.jsMaxInput.js-price-max(type='text', name='arrFilter_pf[PRICE][RIGHT]')
+	//- 					|                     млн. руб.
+	//- 				.slilder-wrap
+	//- 					.slider.jsSlider
+	//- 		.filter-block
+	//- 			.block-title Этажность
+	//- 			.checkbox-list.js-floors
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[FLOORS][]', value='1')
+	//- 					span.checkbox
+	//- 					span Один этаж
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[FLOORS][]', value='2')
+	//- 					span.checkbox
+	//- 					span Два этажа
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[FLOORS][]', value='3')
+	//- 					span.checkbox
+	//- 					span Два этажа (мансарда)
+	//- 		.filter-block
+	//- 			.block-title Технология
+	//- 			.checkbox-list.js-technology
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[TECHNOLOGY][]', value='7')
+	//- 					span.checkbox
+	//- 					span Кирпич + Клееный брус
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[TECHNOLOGY][]', value='8')
+	//- 					span.checkbox
+	//- 					span Клееный брус
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[TECHNOLOGY][]', value='9')
+	//- 					span.checkbox
+	//- 					span Фахверк
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[TECHNOLOGY][]', value='17')
+	//- 					span.checkbox
+	//- 					span Кирпич
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[TECHNOLOGY][]', value='18')
+	//- 					span.checkbox
+	//- 					span Флэтхаус
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[TECHNOLOGY][]', value='19')
+	//- 					span.checkbox
+	//- 					span Дуплекс
+	//- 				label
+	//- 					input(type='checkbox', name='arrFilter_pf[TECHNOLOGY][]', value='20')
+	//- 					span.checkbox
+	//- 					span Панели + Клееный брус
+	//- 		.filter-block
+	//- 			.block-title Площадь
+	//- 			.range-slider-widget.jsRangeSlider(data-min='56', data-max='878', data-mindefault='56', data-maxdefault='878', data-step='1', data-glued='20')
+	//- 				.slider-inputs
+	//- 					span.from От
+	//- 					input.min-input.jsMinInput.js-area-min(type='text', name='arrFilter_pf[AREA][LEFT]')
+	//- 					span.to до
+	//- 					input.max-input.jsMaxInput.js-area-max(type='text', name='arrFilter_pf[AREA][RIGHT]')
+	//- 					|                     кв. м.
+	//- 				.slilder-wrap
+	//- 					.slider.jsSlider
+	//- 		.filter-footer
+	//- 			.filter-submit
+	//- 				input(type='submit', name='set_filter', value='Показать')
+	//- 				input.js-filter-submit(type='hidden', name='set_filter', value='Y')
+	//- 			a.reset-link.js-link.js-reset-filter(href='javascript:void(0)')
+	//- 				i.icon.icon-reset
+	//- 				span Сбросить фильтр
+	//- 		.spacer
+	//- .projects-catalog.js-ajax-navigation.js-ajax-sort(data-href='/projects/')
+	//- 	.catalog-sort
+	//- 		span.sort-title
+	//- 			i.icon.icon-sort
+	//- 			span Сортировать
+	//- 		a.sort-item.js-link.js-sort.active(href='javascript:void(0)', data-field='SORT', data-direction='DESC')
+	//- 			span Популярность
+	//- 			i.icon.icon-up
+	//- 		a.sort-item.js-link.js-sort(href='javascript:void(0)', data-field='PROPERTY_PRICE', data-direction='ASC')
+	//- 			span Цена
+	//- 			i.icon.icon-up
+	//- 		a.sort-item.js-link.js-sort(href='javascript:void(0)', data-field='PROPERTY_AREA', data-direction='ASC')
+	//- 			span Площадь
+	//- 			i.icon.icon-up
+	//- 		a.sort-item.js-link.js-sort(href='javascript:void(0)', data-field='PROPERTY_TECHNOLOGY', data-direction='ASC')
+	//- 			span Технология
+	//- 			i.icon.icon-up
+	//- .projects-wrapper-container
+	//- 	.projects-wrapper
+	//- 		.projects-list(data-el-cnt='37', data-section-id='12')
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 			.project
+	//- 				a(href='populyarnye-proekty/proekt-pb-164/index.html')
+	//- 					.image
+	//- 						i.icon.icon-label-small.green
+	//- 							span Хит продаж
+	//- 						img(src='../upload/resize_cache/iblock/238/139_92_27f5c944b3b71591cc9304fac25365de2/23804e3d8a4a63624d3df92ca851eba7.jpg', alt='')
+	//- 					.description
+	//- 						h3 Проект ПБ-164
+	//- 						p Панели + Клееный брус
+	//- 					.area
+	//- 						| 164 м
+	//- 						sup 2
+	//- 					.price
+	//- 						| 3 490 000
+	//- 						span.rouble p
+	//- 	// PAGINATION
+	//- 	.pager.slider-controls
+	//- 	span
+	//- 		span.control.prev.disabled
+	//- 			span
+	//- 	span.pager-link.active(data-page-num='1')
+	//- 			| 1
+	//- 		a.pager-link(data-page-num='2', href='')
+	//- 			| 2
+	//- 		a.pager-link(data-page-num='3',  href='')
+	//- 			| 3
+	//- 		a.pager-link(data-page-num='4',  href='')
+	//- 			| 4
+	//- 		a.pager-link(data-page-num='5', href='')
+	//- 			| 5
+	//- 		a.pager-link(data-page-num='6', href='')
+	//- 			| 6
+	//- 		a.arrow(data-page-num='2', href='')
+	//- 			span.control.next
+	//- 				span
+	//- 		link(rel='next',  href='')
+	.projects__container
+		p.projects__title Выбор проекта
+		.projects__left
+			form(action)
+				.projects__left-title Категория дома
+					input(type='checkbox', value='1', id='checkbox1')
+					label(for='checkbox1') Профилированный брус
+					input(type='checkbox',  value='2', id='checkbox1')
+					label(for='checkbox1') Каркасные дома
+					input(type='checkbox', value='3', id='checkbox1')
+					label(for='checkbox1') Деревянные бани
+					input(type='checkbox', value='4', id='checkbox1')
+					label(for='checkbox1') Деревянные бани
+					input(type='checkbox', value='4', id='checkbox1')
+					label(for='checkbox1') Дачные дома
+					input(type='checkbox', value='4', id='checkbox1')
+					label(for='checkbox1') Сферические дома и бани
+					input(type='checkbox', value='4', id='checkbox1')
+					label(for='checkbox1') Дома с участками
+				.projects__left-title Этажность
+					input(type='checkbox', value='1', id='checkbox1')
+					label(for='checkbox1') Один этаж
+					input(type='checkbox',  value='2', id='checkbox1')
+					label(for='checkbox1') Два этажа
+					input(type='checkbox', value='3', id='checkbox1')
+					label(for='checkbox1') Два этажа(мансарда)
+				.projects__left-title Площадь
+
+

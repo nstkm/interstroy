@@ -1,0 +1,121 @@
+﻿.technology__container {
+    width: 1030px;
+    color: $grey;
+    margin: 0 auto;
+    @include clearfix;
+}
+.technology__left{
+    width: 266px;
+    height: 294px;
+    float: left;
+    background: #ebebeb;
+    margin-bottom: 40px;
+}
+.technology__left-title {
+    margin-top: 35px;
+    font-family: 'open_sanssemibold';
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 14px;
+        &:after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 246px;
+        height: 1px;
+        background:#e4e0de;
+    }
+}
+.technology-tabs__control {
+    margin-left: 24px;
+
+}
+.technology-tabs__control-link {
+    font-family: 'open_sanssemibold';
+    font-size: 13px;
+    text-decoration: none;
+    color: $grey;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.technology-tabs__control-item {
+    margin-bottom: 15px;
+}
+.technology__left-btn {
+    display: inline-block;
+    float: left;
+    font-size: 14;
+    width: 210px;
+    height: 45px;
+    margin-left: 27px;
+    margin-top: 10px;
+
+    text-align: center;
+    padding-top: 11px;
+    background: $green;
+    color: white;
+    font-family: 'open_sansbold';
+    text-decoration: none;
+    &:hover {
+        background: #95cf31;
+    }
+}
+.technology-tabs__list-item {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+.technology-tabs__control-item a {
+    outline: none;
+}
+.technology-tabs__list-right {
+    width: 723px;
+    float: right;
+    margin-bottom: 40px;
+}
+.technology-tabs__list {
+    font-family: 'open_sansregular';
+    font-size: 13px;
+    color: $grey;
+    text-align: justify;
+}
+.technology-tabs__list-title {
+     font-family: 'open_sanssemibold';
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.technology-tabs__list-text , .technology-tabs__list-text--right {
+    margin-bottom: 15px;
+}
+.technology-tabs__list-img1--wrap {
+    display: block;
+    width: 723px;
+    height: 300px;
+}
+.technology-tabs__list-img2--wrap {
+    height: 300px;
+    width: 370px;
+}
+.technology-tabs__list-img1 , .technology-tabs__list-img2{
+    width: 100%;
+    height: 100%;
+}
+
+.technology-tabs__list-left {
+    float: left;
+    @include clearfix;
+}
+.technology-tabs__list-left--left {
+    width: 600px;
+    margin-right: 35px;
+    float: left;
+}
+.technology-tabs__list-left--right {
+    float: right;
+}
+.technology .main-page-container {
+    width: 1030px;
+}

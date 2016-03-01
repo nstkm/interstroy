@@ -1,0 +1,109 @@
+﻿.maps-object__container {
+    width: 1029px;
+    margin: 0 auto;
+    color: $grey;
+   & .main-page-container {
+    width: 1029px;
+   }
+}
+.maps-object__title {
+    font-family: 'open_sans_condensedbold';
+    font-size: 36px;
+    margin-bottom: 41px;
+    line-height: 29px;
+}
+.maps-object__wrap {
+    @include clearfix;
+    margin-bottom: 84px;
+}
+.maps-object__left {
+    width: 700px;
+    float: left;
+}
+.maps-object__right {
+    width: 300px;
+    float: right;
+    &-title {
+        font-family: 'open_sans_condensedbold';
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 22px;
+    }
+}
+.maps-object__see {
+    margin-bottom: 84px;
+    &-title {
+    font-family: 'open_sans_condensedbold';
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 70px;
+    }
+    &-value {
+        @include inlineblock;
+        width: 340px;
+        height: 142px;
+          cursor: pointer;
+        position: relative;
+    }
+}
+.see-value__img {
+
+ -moz-transition: all 1s ease-out;
+ -o-transition: all 1s ease-out;
+ -webkit-transition: all 1s ease-out;
+ transition: all 1s ease-out;
+
+ }
+
+.see-value__img:hover   {
+ -webkit-transform: scale(1.1);
+ -moz-transform: scale(1.1);
+ -o-transform: scale(1.1);
+ transform: scale(1.1);
+ }
+.see-value__text-wrap {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    text-align: center;
+    text-transform: uppercase;
+    &--one {
+            top: 27%;
+            left: 30%;
+    }
+    &--two {
+            top: 27%;
+            left: 12%;
+    }
+    &--three {
+            top: 27%;
+            left: 23%;
+    }
+
+ }
+ .see-value__text-red {
+    color: $orange;
+    font-family: 'open_sansbold';
+    font-size: 26px;
+ }
+ .see-value__text {
+    font-family: 'open_sansbold';
+    font-size: 15px;
+ }
+ .see-value__img-wrap {
+    text-align: center;
+    line-height: 200px;
+    vertical-align: middle;
+    &--two {
+    position: absolute;
+    left: 34%;
+    top: -5%;
+   }
+ }
+
+
+#map_two {
+    width: 100%;
+    height: 400px;
+}
+

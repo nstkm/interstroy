@@ -11,8 +11,6 @@
 	imagemin = require('gulp-imagemin'),
 	minifyCss = require('gulp-minify-css'),
 	browserSync = require('browser-sync'),
-	gutil = require('gulp-util'),
-	ftp = require('vinyl-ftp'),
 	reload = browserSync.reload,
 	uncss = require('gulp-uncss'),
 	sass = require('gulp-sass');
@@ -56,11 +54,11 @@ gulp.task('server', ['jade'], function () {
 
 // Подключаем ссылки на bower
 gulp.task('wiredep', function() {
-	gulp.src('app/templates/common/*.jade')
+	gulp.src('app/jade/common/*.jade')
 		.pipe(wiredep({
 			ignorePath: /^(\.\.\/)*\.\./
 		}))
-		.pipe(gulp.dest('app/templates/common/'))
+		.pipe(gulp.dest('app/jade/common/'))
 });
 
 // слежка и запуск задач
@@ -69,7 +67,7 @@ gulp.task('watch', function () {
 	gulp.watch('app/scss/**/*.scss', ['scss']);
 	gulp.watch('bower.json', ['wiredep']);
 	gulp.watch([
-		'app/js/**/*.js',
+		'app/scripts/*.js',
 		'app/css/*.css',
 		'app/*.html'
 	]).on('change', reload);
@@ -161,8 +159,7 @@ gulp.task('uncss', function () {
 
 // ОСНОВНАЯ команда для сборки gulp-build
 gulp.task('build', ['clean', 'jade'], function () {
-	gulp.start('dist')
-		.start('uncss');
+	gulp.start('dist');
 });
 
 // сервер для dist gulp server-dist - проверка сборки
@@ -176,20 +173,4 @@ gulp.task('server-dist', function() {
 	});
 });
 
-// deploy на хостинг gulp deply
-gulp.task('deploy', function() {
-	var conn = ftp.create({
-		host: '',
-		user: '',
-		password: '',
-		parallel: 10,
-		log: gutil.log
-	});
 
-	var globs = [
-		'dist/**/*'
-	];
-
-	return gulp.src(globs, { base: 'dist/', buffer: false})
-		.pipe(conn.dest('public_html/'));
-});

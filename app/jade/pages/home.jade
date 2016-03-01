@@ -1,0 +1,113 @@
+﻿extends ../layouts/layout.jade
+
+block content
+	.home__container
+		ul.breadcrumbs-list
+					each items, index in ['Проекты', 'Каркасные дома']
+						li.breadcrumbs-item
+							a(href="index.html"  target="_blank" class='breadcrumbs-link' + ((index == 2) ? ' breadcrumbs__link--active' : ''))= items
+		section.home__photo
+			p.home__photo__title Комфорт КА-025
+			.home__photo-left
+				.photo-left__wrap
+					a(href="").photo-left__big
+						img.photo-left__big-img(alt='photo-home' src="../img/house9.jpg")
+				a(href="").home__btn.photo-left__download скачать варианты планировок
+			.home__photo-right
+				.photo-right__wrap-photo
+					ul.photo-right__list
+						li.photo-right_item
+							a.photo-right__link(href='')
+								img.photo-right__img(alt='photo-home' src="../img/house9.jpg")
+						li.photo-right_item
+							a.photo-right__link(href='')
+								img.photo-right__img(alt='photo-home' src="../img/house10.jpg")
+						li.photo-right_item
+							a.photo-right__link(href='')
+								img.photo-right__img(alt='photo-home' src="../img/house9.jpg")
+						li.photo-right_item
+							a.photo-right__link(href='')
+								img.photo-right__img(alt='photo-home' src="../img/house10.jpg")
+						li.photo-right_item.photo-right_item-big
+							a.photo-right__link(href='')
+								img.photo-right__img(alt='photo-home' src="../img/project1.jpg")
+						li.photo-right_item.photo-right_item-big
+							a.photo-right__link(href='')
+								img.photo-right__img(alt='photo-home' src="../img/project2.jpg")
+				.photo-right__wrap-pagination
+					ul.pagination__list
+						li.pagination__item
+							a.pagination__link-prev(href='') назад
+						li.pagination__item
+							a.pagination__link(href='#') 1
+						li.pagination__item
+							a.pagination__link(href='#') 2
+						li.pagination__item
+							a.pagination__link(href='#') 3
+						li.pagination__item
+							a.pagination__link(href='#') 4
+						li.pagination__item
+							a.pagination__link(href='#') 5
+						li.pagination__item
+							a.pagination__link(href='#') 6
+						li.pagination__item
+							a.pagination__link-next(href='#') вперед
+		section.home__desc
+			p.home__desc-title Описание и комплектация
+			.home__desc-left
+				.desc-left__complect
+					p.desc-left__complect-title Стеновой комплект
+					p.desc-left__complect-text 1 этаж: крупноформатный керамический блок POROTHERM 38***. <br> Коэффициент теплопроводности (Вт/м*С): 0,145. <br> Коэффициент паропроницаемости (мг/м*ч*Па): 0,14. <br> Прочность на сжатие: М100. <br> 2 этаж: брус клееный профилированный стеновой GOOD WOOD 175×140. <br> Антисептирование стенового бруса. <br> Клей EPI-cистема. Класс влагостойкости D4 ++. <br> Немецкий профиль бруса с тройным уплотнением. <br>Металлические стержни (шпильки), гайки, шайбы, уплотнительная лента для герметизации чашек. <br> Балки — сухие, клееные, строганные, обработанные огнебиозащитным составом. <br> Лестница межэтажная строительная однопролетная, хвоя.Стеновой комплект <br> этаж: крупноформатный керамический блок POROTHERM 38***. <br> Коэффициент теплопроводности (Вт/м*С): 0,145. <br> Коэффициент паропроницаемости (мг/м*ч*Па): 0,14. <br> Прочность на сжатие: М100. <br> 2 этаж: брус клееный профилированный стеновой GOOD WOOD 175×140. <br> Антисептирование стенового бруса. <br> Клей EPI-cистема. Класс влагостойкости D4 ++. <br> Немецкий профиль бруса с тройным уплотнением. <br>Металлические стержни (шпильки), гайки, шайбы, уплотнительная лента для герметизации чашек. <br> Балки — сухие, клееные, строганные, обработанные огнебиозащитным составом. <br> Лестница межэтажная строительная однопролетная, хвоя.этаж: крупноформатный керамический блок POROTHERM 38***. <br> Коэффициент теплопроводности (Вт/м*С): 0,145. <br> Коэффициент паропроницаемости (мг/м*ч*Па): 0,14. <br> Прочность на сжатие: М100. <br> 2 этаж: брус клееный профилированный стеновой GOOD WOOD 175×140. <br> Антисептирование стенового бруса. <br> Клей EPI-cистема. Класс влагостойкости D4 ++. <br> Немецкий профиль бруса с тройным уплотнением. <br>Металлические стержни (шпильки), гайки, шайбы, уплотнительная лента для герметизации чашек. <br> Балки — сухие, клееные, строганные, обработанные огнебиозащитным составом. <br> Лестница межэтажная строительная однопролетная, хвоя.Стеновой комплект
+					.desc-left__complect-btn--wrap
+						a(href="").home__btn.desc-left__complect-btn скачать подробную комплектацию
+
+
+			.home__desc-right
+				p.home__desc-right--title Цена дома "ПОД КЛЮЧ"
+				p.projects__item-price--old 2 100 000 руб.
+				p.home__desc-right--money.projects__item-price--new  1 840 000  <span> руб.</span>
+				p.home__desc-right--area 120 м<sup>2</sup> <span> (9&#215;7) </span>
+				ul.home__desc-right--list
+					li.home__desc-right--item Фундамент
+					li.home__desc-right--item Окна
+					li.home__desc-right--item Двери
+					li.home__desc-right--item Внутренняя отделка
+					li.home__desc-right--item Кровля
+					li.home__desc-right--item Стеновой комплект
+				a(href="").home__btn.home__desc-right--btn узнать подробнее
+		section.home-same__projects
+			p.home-same__projects-title Похожие проекты
+			.home-same__projects-wrap
+				a( target="_blank" href='').projects__item
+					img(src='../img/house2.jpg' alt='projects').projects__item-img
+					.projects__item-line
+					p.projects__item-title Ясность КА 025
+					p.projects__item-text Каркасный дом
+					p.projects__item-number 120 м<sup>2</sup> <span> (9&#215;7) </span>
+					.projects__item-line
+					p.projects__item-price--old 2 150 000 руб.
+					p.projects__item-price--new 1 970 000  <span> руб.</span>
+				a( target="_blank" href='').projects__item
+					img(src='../img/house3.jpg' alt='projects').projects__item-img
+					.projects__item-line
+					p.projects__item-title Триумф КА 025
+					p.projects__item-text Каркасный дом
+					p.projects__item-number 99 м<sup>2</sup>
+					.projects__item-line
+					p.projects__item-price--old 2 000 000 руб.
+					p.projects__item-price--new  1 970 000  <span> руб.</span>
+				a( target="_blank" href='').projects__item
+					img(src='../img/house4.jpg' alt='projects').projects__item-img
+					.projects__item-line
+					p.projects__item-title Надежда КА 025
+					p.projects__item-text Каркасный дом
+					p.projects__item-number 113 м<sup>2</sup> <span> (9&#215;8,5) </span>
+					.projects__item-line
+					p.projects__item-price--old 2 100 000 руб.
+					p.projects__item-price--new  1 970 000  <span> руб.</span>
+	include ../common/feedback.jade
+	include ../common/seotext.jade
+
+
+
+

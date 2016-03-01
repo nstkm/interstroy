@@ -1,0 +1,46 @@
+﻿extends ../layouts/layout.jade
+
+block content
+	.maps-object__container
+		ul.breadcrumbs-list
+					each items, index in ['Главная', 'Карта строящихся объектов']
+						li.breadcrumbs-item
+							a( target="_blank" href="index.html" class='breadcrumbs-link' + ((index == 2) ? ' breadcrumbs__link--active' : ''))= items
+		p.maps-object__title Карта строящихся объектов
+		.maps-object__wrap
+			.maps-object__left
+				div(id="map_two")
+			.maps-object__right(id="maps-objects__form")
+				p.maps-object__right-title Запишитесь на просмотр объектов прямо сейчас
+				form(action="").maps-object__form
+							label.content-right__form-label.maps-object__form-label(for='name')
+							input.content-right__form-input.maps-object__form-input(id='name' type='text' placeholder='Имя')
+							label.content-right__form-label.maps-object__form-label(for='phone')
+							input.content-right__form-input.maps-object__form-input(id='phone' type='tel' placeholder='Телефон')
+							label.content-right__form-label.maps-object__form-label(for='message')
+							textarea.content-right__form-textarea.maps-object__form-textarea(id='message' , rows='5' ,  placeholder='Напишите № объекта и удобное для вас время')
+							button.content-right__form-button.maps-object__form-button( type='submit') Отправить
+		section.maps-object__see
+			p.maps-object__see-title Вы увидите:
+			.maps-object__see-value
+				p.see-value__img-wrap
+					img.see-value__img(alt='value' src='../img/img1.png')
+				.see-value__text-wrap.see-value__text-wrap--one
+					p.see-value__text-red качество
+					p.see-value__text материалов
+			.maps-object__see-value
+				p.see-value__img-wrap.see-value__img-wrap--two
+					img.see-value__img(alt='value' src='../img/img2.png')
+				.see-value__text-wrap.see-value__text-wrap--two
+					p.see-value__text-red профессионализм
+					p.see-value__text специальстов
+			.maps-object__see-value
+				p.see-value__img-wrap
+					img.see-value__img(alt='value' src='../img/img3.png')
+				.see-value__text-wrap.see-value__text-wrap--three
+					p.see-value__text-red технологии
+					p.see-value__text строительства
+		include ../common/seotext.jade
+
+
+
