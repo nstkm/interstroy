@@ -6,8 +6,9 @@
 }
 .technology__left{
     width: 266px;
-    height: 294px;
+    min-height: 271px;
     float: left;
+    position: relative;
     background: #ebebeb;
     margin-bottom: 40px;
 }
@@ -44,6 +45,8 @@
     margin-bottom: 15px;
 }
 .technology__left-btn {
+    position: absolute;
+    bottom: 20px;
     display: inline-block;
     float: left;
     font-size: 14;
